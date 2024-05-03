@@ -1,0 +1,6 @@
+HTML E CSS:
+
+Fazer a pagina de login - Fazer um novo index.html, o atual passa a chamar-se homepage.html ou menu.html.
+
+Acabar a home page e as paginas das viagens com mais opcoes e para ficarem mais bonitas.
+
