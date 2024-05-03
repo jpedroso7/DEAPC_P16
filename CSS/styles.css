@@ -3,41 +3,22 @@ body {
     margin: 0;
     padding: 0;
   
-    background-image: url("../Imagens/182408209/LogoFiles/ForWeb/png/Blacklogo.png");
+    background-image: url("../Imagens/182408209/LogoFiles/ForWeb/svg/blackLogo.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 50vw 50vh;
+    background-size: 100vw 85vh;
     background-attachment: fixed;
-    
-    
-    
-    
   }
-  header {
-    background-color: #175579; /* Set header background color to #175579 */
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-  }
-  h1 {
-    margin: 0;
-  }
+
+ 
   .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
+    margin-top: 80px;
   }
-  .destination {
-    width: 60vw;
-    height: 40vh;
-    margin: 40px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    background: #175579;
-    border-style: ridge;
-  }
+
 
   #grecia {
 
@@ -88,8 +69,21 @@ body {
   .destination-info p {
     margin: 0;
   }
-  
 
+  .destination-info:hover {
+
+    color: blue;
+  }
+  
+  .link {
+    text-decoration: none; 
+    
+  }
+  
+  .link:hover {
+    color: blue; /* Change color to blue on hover */
+    
+  }
 
 /*CSS para menu de destinos*/
 
@@ -118,14 +112,18 @@ body {
     cursor: pointer;
   }
 
-  .link {
-    color: inherit; /* Inherit color from parent */
-    text-decoration: none; /* Remove default underline */
-    
+ 
+ 
+  .destination {
+    width: 60vw;
+    height: 40vh;
+    margin: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #175579;
+    border-style: ridge;
   }
-  
-  .link:hover {
-    color: blue; /* Change color to blue on hover */
-    
-  }
-  
+
+
+ 
