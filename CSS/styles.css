@@ -1,59 +1,98 @@
-
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
-h1 {
-  margin: 0;
-}
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-}
-.destination {
-  width: 250px;
-  margin: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.destination img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-.destination-info {
-  padding: 10px;
-}
-.destination-info h3 {
-  margin: 5px 0;
-}
-.destination-info p {
-  margin: 0;
-}
-
-
-.link {
-    text-decoration: none; /* Remove underline */
-  }
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
   
-  .link:hover {
-    color: blue; /* Change color on hover */
+    background-image: url("../Imagens/182408209/LogoFiles/ForWeb/png/Blacklogo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50vw 50vh;
+    background-attachment: fixed;
+    
+    
+    
+    
+  }
+  header {
+    background-color: #175579; /* Set header background color to #175579 */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  h1 {
+    margin: 0;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  .destination {
+    width: 60vw;
+    height: 40vh;
+    margin: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #175579;
+    border-style: ridge;
+  }
+
+  #grecia {
+
+    background: url("../Imagens/grecia2.jpg") no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  #brasil {
+    background: url("../Imagens/brasil2.jpg") no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  #paraguai {
+    background: url("../Imagens/paraguai.jpg") no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  #japao {
+    background: url("../Imagens/japao.jpg") no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  #noruega {
+    background: url("../Imagens/noruega.jpg") no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  #marrocos {
+    background: url("../Imagens/marrocos.jpg") no-repeat center;
+    background-size: 100% 100%;
+  }
+
+
+  .destination img {
+    width: 100%;
+    height:auto;
+    
+  }
+  .destination-info {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    
+  }
+  .destination-info h3 {
+    margin: 5px 0;
+  }
+  .destination-info p {
+    margin: 0;
   }
   
 
 
 /*CSS para menu de destinos*/
- 
+
 .container2 {
     max-width: 600px;
     margin: 20px auto;
@@ -78,3 +117,15 @@ h1 {
     padding: 10px 20px;
     cursor: pointer;
   }
+
+  .link {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove default underline */
+    
+  }
+  
+  .link:hover {
+    color: blue; /* Change color to blue on hover */
+    
+  }
+  
