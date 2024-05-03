@@ -1,0 +1,86 @@
+#logo {
+
+    width: 100%;
+    height: 100%;
+    
+}
+
+.Menu_user {
+    display:flex;
+    justify-content: space-between;
+    color: white;
+}
+
+
+
+.hello {
+    margin-right:  10px;
+}
+
+nav {
+display:flex;
+height: 80px;
+width: 100%;
+justify-content:space-around;
+background-color: rgb(0, 87, 146);
+z-index: 999;
+position: fixed;
+top:0;
+}
+
+
+
+
+#titulo {
+font-family: 'Lato', sans-serif;
+}
+
+.menu, .drop-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+    align-content: center;
+}
+
+.menu-item {
+    display: inline-block;
+    background-color: #4285f4;
+    position: center;
+    margin-bottom: 10px;
+    border-radius: 8px;
+ 
+}
+
+.menu-item a {
+    text-decoration: none;
+    padding: 10px 10px;
+    color: #fff;
+    display: block;
+    width: 50px;
+    align-self: center;
+}
+
+.drop-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 100px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.drop-menu-item {
+    width: 100%;
+}
+
+.drop-menu-item:hover {
+    background-color: #eee;
+}
+
+.drop-menu-item a {
+    color: #555;
+}
+
+.menu-item:hover .drop-menu {
+    display: block;
+}
