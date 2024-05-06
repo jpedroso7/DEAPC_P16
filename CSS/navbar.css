@@ -11,12 +11,18 @@
     display:flex;
     justify-content: space-between;
     color: white;
+    align-items: center;
 }
 
+img {
 
+    width: fit-content;
+    height: fit-content;
+}
 
 .hello {
     margin-right:  10px;
+    margin-bottom: 10px;
 }
 
 nav {
@@ -28,13 +34,21 @@ background-color: rgb(0, 87, 146);
 z-index: 999;
 position: fixed;
 top:0;
+
+
 }
 
 
 
 
 #titulo {
-font-family: 'Lato', sans-serif;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+align-items: center;
+align-content: center;
+}
+
+#titulo h1 {
+    margin: 0 auto;
 }
 
 .menu, .drop-menu {

@@ -19,6 +19,17 @@ body {
     margin-top: 80px;
   }
 
+  .destination {
+    width: 60vw;
+    height: 40vh;
+    margin: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #175579;
+    border-style: ridge;
+  }
+
 
   #grecia {
 
@@ -72,58 +83,18 @@ body {
 
   .destination-info:hover {
 
-    color: blue;
+    color: #142630;
   }
   
+  #info-paraguai:hover {
+
+    color: rgb(73, 150, 86) ;
+  }
+
   .link {
     text-decoration: none; 
     
   }
   
-  .link:hover {
-    color: blue; /* Change color to blue on hover */
-    
-  }
-
-/*CSS para menu de destinos*/
-
-.container2 {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-  button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-
- 
- 
-  .destination {
-    width: 60vw;
-    height: 40vh;
-    margin: 40px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    background: #175579;
-    border-style: ridge;
-  }
-
 
  
