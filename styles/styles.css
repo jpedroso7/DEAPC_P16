@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-image: url("../images/182408209/LogoFiles/ForWeb/svg/blackLogo.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100vw 85vh;
+    background-attachment: fixed;
+  }
+
+ 
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 80px;
+  }
+
+  .destination {
+    width: 60vw;
+    height: 40vh;
+    margin: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #175579;
+    border-style: ridge;
+  }
+
+
+  #grecia {
+
+    background: url("../images/grecia2.jpg") no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  #brasil {
+    background: url("../images/brasil2.jpg") no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  #paraguai {
+    background: url("../images/paraguai.jpg") no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  #japao {
+    background: url("../images/japao.jpg") no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  #noruega {
+    background: url("../images/noruega.jpg") no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  #marrocos {
+    background: url("../images/marrocos.jpg") no-repeat center;
+    background-size: 100% 100%;
+  }
+
+
+  .destination img {
+    width: 100%;
+    height:auto;
+    
+  }
+  .destination-info {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    
+  }
+  .destination-info h3 {
+    margin: 5px 0;
+  }
+  .destination-info p {
+    margin: 0;
+  }
+
+  .destination-info:hover {
+
+    color: #142630;
+  }
+  
+  #info-paraguai:hover {
+
+    color: rgb(73, 150, 86) ;
+  }
+
+  .link {
+    text-decoration: none; 
+    
+  }
+  
+
+ 

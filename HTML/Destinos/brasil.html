@@ -4,17 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Viagens para o Brasil</title>
-  <link rel="stylesheet" href="../../CSS/styles.css">
-  <style>
-
-  </style>
+  <link rel="stylesheet" href="../../styles/navbar.css">
+  <link rel="stylesheet" href="../../styles/viagemConfig.css">
+  <link rel="icon" type="image/x-icon" href="../../images/182408209/LogoFiles/ForWeb/Favicons/browser.png">
 </head>
 <body>
-  <header>
-    <h1>Book Your Trip to Brasil</h1>
-  </header>
+  <nav>
+    <div class="img_container">
+       <a href="../index.html"><img src="../../images/182408209/LogoFiles/ForWeb/Favicons/Android.png" alt="Logo" id="logo"></a>
+    </div>
+   <div id="titulo">
+    <h1>
+      Book your trip to Brasil
+    </h1>
+   </div>
+    <div class="Menu_user">
+       <h1 class="hello">Hello </h1>
+       <ul class="menu">
+        <li class="menu-item">
+       <a  class="User">User</a>
+       <ul class="drop-menu">
+        <li class="drop-menu-item">
+            <a href="#">Perfil</a>
+        </li>
+        <li class="drop-menu-item">
+            <a href="#">Reservas</a>
+        </li>
+        <li class="drop-menu-item">
+            <a href="#">Reviews</a>
+        </li>
+    </ul>
+  </li>
+</ul>
+      </div>
+   
+  </nav>
   <div class="container2">
-    <form action="booking_confirmation_page.html" method="POST">
+    <form id="bookingForm" action="booking_confirmation_page.html" method="POST">
       <label for="departure">Departure Airport:</label>
       <select name="departure" id="departure">
         <option value="lisbon">Lisbon</option>
@@ -42,6 +68,9 @@
 
       <button type="submit">Book Now</button>
     </form>
+    <div id="priceDisplay"></div>
   </div>
+
+  <script src="../../scripts/preço.js"></script>
 </body>
 </html>
