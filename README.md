@@ -4,10 +4,12 @@ O principal objetivo deste website é providenciar ao utilizador uma forma prát
 O utilizador terá acesso a uma ampla lista de viagens disponiveis, cada uma como um diferente roteiro e opções.
 
 **Tipos de Utilizadores**
+
 A plataforma destina-se principalmente a dois tipos de utilizadores:
 
-Cliente: utilizador que procura informações sobre destinos, explora ofertas de viagens e realiza reservas através da plataforma.
-Administrador: Responsavel pela gestão do conteúdo do site, atualização de informações de destinos, gestão de reservas, promoções e feedback dos clientes.
+**Cliente:** utilizador que procura informações sobre destinos, explora ofertas de viagens e realiza reservas através da plataforma.
+
+**Administrador:** Responsavel pela gestão do conteúdo do site, atualização de informações de destinos, gestão de reservas, promoções e feedback dos clientes.
 
 **Funcionalidades**
 
