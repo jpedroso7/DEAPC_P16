@@ -12,8 +12,13 @@
  
 </head>
 <body>
+ <!-- <style>
+    #reservas {
+        display: none; 
+    }
+</style>-->
   
-  <nav>
+<nav>
     <div class="img_container">
        <a href="#"><img src="../images/182408209/LogoFiles/ForWeb/Favicons/Android.png" alt="Logo" id="logo"></a>
     </div>
@@ -26,10 +31,12 @@
 <a href="../HTML/login.html"><button class="login">login</button></a>
 <a href="../HTML/register.html"><button class="sign">sign up</button></a>
 
-   </div>
-        </li>
-    </ul>
+<ul>
+  <li class="drop-menu-item">
+      <a href="#">Home</a>
   </li>
+  <li><a href="#destinos">Destinos</a></li>
+  <li id="reservas"><a href="#reservas">Reservas</a></li>
 </ul>
       </div>
    
@@ -103,5 +110,20 @@
     </div>
   
   </div>
+  <!--<script>
+    function login() {
+        localStorage.setItem('isLoggedIn', true);
+        checkLoginStatus();
+    }
+
+    function checkLoginStatus() {
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+        if (isLoggedIn) {
+            document.getElementById('reservas').style.display = 'block';
+        }
+    }
+
+    window.onload = checkLoginStatus;
+</script>-->
 </body>
 </html>
