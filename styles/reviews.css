@@ -1,4 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 .rating_box {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -8,31 +13,32 @@
 
 .review_box {
     position: relative;
-    background: #005b97;
+    background:  #005b97;
     padding: 25px 50px 35px;
     border-radius: 25px;
 }
 
-.review_box header{
+.review_box header {
     font-size: 22px;
-    color: #dadada;
+    color: #dadadaaf;
     font-weight: 500;
     margin-bottom: 20px;
     text-align: center;
 }
 
-.review_box .stars{
+.review_box .stars {
     display: flex;
     align-items: center;
     gap: 25px;
 }
 
-.stars span{
+.stars i {
     color: #e6e6e6;
     font-size: 35px;
     cursor: pointer;
+    transition: color 0.2s ease;
 }
 
-.checked {
-    color: rgb(255, 208, 0);
+.stars i.active {
+    color: #fff01a;
 }
