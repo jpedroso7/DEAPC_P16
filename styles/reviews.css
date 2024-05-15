@@ -1,0 +1,31 @@
+.text_box {
+    display: block;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    line-height: 24px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 3px solid rgb(0,87,146);
+    border-radius: 20px;
+}
+
+.review_box {
+    color: rgb(0, 0, 0);
+    background-color: aliceblue;
+    width: auto;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 3px solid rgb(0, 87, 146);
+    border-radius: 20px;
+
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-bottom: 20px;
+}
