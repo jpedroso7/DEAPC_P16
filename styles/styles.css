@@ -4,9 +4,9 @@ body {
   padding: 0;
   scroll-behavior: smooth;
   background-image: url("../images/182408209/background3.jpg");
-  background-position: cover;
+  background-position: fixed ;
   background-repeat: no-repeat;
-  background-size: center;
+  background-size: cover;
   background-attachment: scroll;
   color: #333;
 }

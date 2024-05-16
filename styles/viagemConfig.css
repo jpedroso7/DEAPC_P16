@@ -1,13 +1,14 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    background-image: url("../images/182408209/LogoFiles/ForWeb/svg/blackLogo.svg");
-    background-position: center;
+    background-image: url("../images/182408209/background3.jpg");
+    background-position: fixed ;
     background-repeat: no-repeat;
-    background-size: 100vw 85vh;
-    background-attachment: fixed;
+    background-size: cover;
+    background-attachment: scroll;
+    color: #333;
 }
 
 header {
