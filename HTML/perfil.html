@@ -11,7 +11,35 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 <body>
-
+    <nav>
+        <div class="img_container">
+           <a href="#"><img src="../images/182408209/LogoFiles/ForWeb/Favicons/Android.png" alt="Logo" id="logo"></a>
+        </div>
+       <div id="titulo">
+        <h1>
+          Desenvolvimento de viagens computacionais
+        </h1>
+       </div>
+        <div class="Menu_user">
+           <h1 class="hello" style="margin-bottom: 30px;">Hello </h1>
+           <ul class="menu">
+            <li class="menu-item">
+           <a  class="User">User</a>
+           <ul class="drop-menu">
+            <li class="drop-menu-item">
+                <a href="perfil.html">Perfil</a>
+            </li>
+            <li class="drop-menu-item">
+                <a href="#">Reservas</a>
+            </li>
+            <li class="drop-menu-item">
+                <a href="#">Reviews</a>
+            </li>
+        </ul>
+            </li>
+        </ul>
+       
+    </nav>
     <div class="Menu_user">
         <h1 class="hello" style="margin-bottom: 30px;">Hello </h1>
         <ul class="menu">
@@ -35,7 +63,14 @@
         <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg" alt="Foto de Perfil">
         <h1>Nome do Utilizador</h1>
         <p>Descrição breve do utilizador</p>
+        <button id="definicoes-btn">Definições</button>
+ <script>
         
+        document.getElementById('definicoes-btn').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = 'definicoes.html';
+        });
+    </script>
 
 
 </body>
