@@ -3,11 +3,11 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  background-image: url("../images/182408209/background3.jpg");
-  background-position: fixed ;
+  background-image: url("../images/background4.jpg");
+  background-position: center ;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: scroll;
+  background-attachment: fixed;
   color: #333;
 }
 

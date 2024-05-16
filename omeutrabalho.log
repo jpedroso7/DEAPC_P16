@@ -1,3 +1,118 @@
+commit 18bf0f7bac0d29a091b966c8dc4281c55ad18d29
+Author: jpedroso7 <jonaspedroso7@gmail.com>
+Date:   Thu May 16 11:06:46 2024 +0100
+
+    Signed-off-by: jpedroso7 <jonaspedroso7@gmail.com>
+    alteração de background
+
+commit 07c9a55d2f3f362f26480bc11c2415c16f8f6de9
+Author: jpedroso7 <jonaspedroso7@gmail.com>
+Date:   Thu May 16 11:02:49 2024 +0100
+
+    Signed-off-by: jpedroso7 <jonaspedroso7@gmail.com>
+    alteração no style.css
+
+commit 6bd1a89fb57c9cb4c5d863f882a6748e2ee07fd0
+Author: jpedroso7 <jonaspedroso7@gmail.com>
+Date:   Thu May 16 10:49:57 2024 +0100
+
+    Signed-off-by: jpedroso7 <jonaspedroso7@gmail.com>
+    mudança de banckground e adição de "Definições" e "Alterar password"
+
+commit 542fed22f897b70aeb0c45a12de590637ce69ec4
+Author: jpedroso7 <jonaspedroso7@gmail.com>
+Date:   Wed May 15 11:33:43 2024 +0100
+
+    Signed-off-by: jpedroso7 <jonaspedroso7@gmail.com>
+    Profile Page / Styles
+
+commit f8da895989fb24e0050be6dbd58b6bc8d50431ba
+Author: Rui1210481 <1210481@isep.ipp.pt>
+Date:   Tue May 14 19:13:17 2024 +0100
+
+    0
+
+commit 64abeae35a663ad8e9d4ba649516159850d59288
+Merge: 8b02b76 a84f627
+Author: jpedroso7 <jonaspedroso7@gmail.com>
+Date:   Thu May 9 16:24:55 2024 +0100
+
+    Merge branch 'main' of https://github.com/jpedroso7/DEAPC_P16
+
+commit 8b02b763402d14a90e8724d6f1dc9894ed1d1ab9
+Author: jpedroso7 <jonaspedroso7@gmail.com>
+Date:   Thu May 9 16:24:02 2024 +0100
+
+    Signed-off-by: jpedroso7 <jonaspedroso7@gmail.com>
+    Correção README
+
+commit a84f627112e9b0a5e0f0cfc207d85264f1bc455b
+Author: Daniel Botelho <botelhodaniel1998@gmail.com>
+Date:   Thu May 9 16:19:12 2024 +0100
+
+    correção de erros nos caminhos do css
+
+commit e512d32e9627dea57d511f60ca9a1f797c29c927
+Merge: 32ec518 f48f34c
+Author: Daniel Botelho <botelhodaniel1998@gmail.com>
+Date:   Thu May 9 11:40:37 2024 +0100
+
+    Merge branch 'main' of https://github.com/jpedroso7/DEAPC_P16
+
+commit 32ec5182adc4646632eee2b01b60cc47d7ed19a5
+Author: Daniel Botelho <botelhodaniel1998@gmail.com>
+Date:   Thu May 9 11:40:28 2024 +0100
+
+    pequenas alteracoes estruturais
+
+commit f48f34c4fa730b38029d8b9122d337278c4035ad
+Author: Rui1210481 <1210481@isep.ipp.pt>
+Date:   Wed May 8 23:19:42 2024 +0100
+
+    Update index.html
+
+commit f06f4dd041dbd4954a5b1e18a4c01c0e5a51f64f
+Author: Rui1210481 <1210481@isep.ipp.pt>
+Date:   Wed May 8 23:18:27 2024 +0100
+
+    Update index.html
+
+commit 1a41ec9e77644e76a362f2a3a5b2a91e378db697
+Author: Rui1210481 <1210481@isep.ipp.pt>
+Date:   Wed May 8 23:16:17 2024 +0100
+
+    Update index.html
+
+commit 38aa150b871b2340b3044a8cad066b33886321b4
+Author: Rui1210481 <1210481@isep.ipp.pt>
+Date:   Wed May 8 23:14:44 2024 +0100
+
+    Update index.html
+
+commit 9251d22c0f4e5942ad2b8dd3a9afe12733e77d50
+Author: Daniel Botelho <botelhodaniel1998@gmail.com>
+Date:   Tue May 7 09:53:31 2024 +0100
+
+    mudanças dos caminhos nos ficheiros
+
+commit 9bf4cb0740785ed88dbb1e8422c3d276965e70ed
+Author: Daniel Botelho <botelhodaniel1998@gmail.com>
+Date:   Tue May 7 09:43:03 2024 +0100
+
+    pastas com os nomes de acordo c o guiao 1
+
+commit 5070d7b30d7f7578312ad75b3360c01386596a08
+Author: Daniel Botelho <botelhodaniel1998@gmail.com>
+Date:   Tue May 7 09:40:19 2024 +0100
+
+    butoes de login
+
+commit 32e82a5dace083d2c2a45548c318b34814234c6c
+Author: Daniel Botelho <botelhodaniel1998@gmail.com>
+Date:   Mon May 6 18:32:17 2024 +0100
+
+    Ajuste de páginas de reserva e javascript para os preços
+
 commit 9630b34b51cfb16efd7f80c4b356e494585b1286
 Author: Daniel Botelho <botelhodaniel1998@gmail.com>
 Date:   Fri May 3 18:58:11 2024 +0100
