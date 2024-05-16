@@ -10,7 +10,7 @@
 .Menu_login {
     display:flex;
     justify-content: space-between;
-    color: white;
+    color: rgb(255, 255, 255);
     align-items: center;
 
 }
