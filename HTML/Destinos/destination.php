@@ -1,9 +1,14 @@
+<?php
+$destino = isset($_GET['destino']) ? $_GET['destino'] : 'Brasil'; 
+$titulo = "Book your trip to $destino";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Viagens para o Brasil</title>
+  <title>Viagens para <?php echo $destino; ?></title>
   <link rel="stylesheet" href="../../styles/navbar.css">
   <link rel="stylesheet" href="../../styles/viagemConfig.css">
   <link rel="icon" type="image/x-icon" href="../../images/logogpt.jpeg">
@@ -13,34 +18,25 @@
     <div class="img_container">
       <a href="#"><img src="../../images/logogpt.jpeg" alt="Logo" id="logo"></a>
     </div>
-   <div id="titulo">
-    <h1>
-      Book your trip to Brasil
-    </h1>
-   </div>
+    <div id="titulo">
+      <h1><?php echo $titulo; ?></h1>
+    </div>
     <div class="Menu_user">
-       <h1 class="hello">Hello </h1>
-       <ul class="menu">
+      <h1 class="hello">Hello</h1>
+      <ul class="menu">
         <li class="menu-item">
-       <a  class="User">User</a>
-       <ul class="drop-menu">
-        <li class="drop-menu-item">
-            <a href="#">Perfil</a>
+          <a class="User">User</a>
+          <ul class="drop-menu">
+            <li class="drop-menu-item"><a href="#">Perfil</a></li>
+            <li class="drop-menu-item"><a href="#">Reservas</a></li>
+            <li class="drop-menu-item"><a href="#">Reviews</a></li>
+          </ul>
         </li>
-        <li class="drop-menu-item">
-            <a href="#">Reservas</a>
-        </li>
-        <li class="drop-menu-item">
-            <a href="#">Reviews</a>
-        </li>
-    </ul>
-  </li>
-</ul>
-      </div>
-   
+      </ul>
+    </div>
   </nav>
   <div class="container2">
-    <form id="bookingForm" action="booking_confirmation_page.html" method="POST">
+    <form id="bookingForm">
       <label for="departure">Departure Airport:</label>
       <select name="departure" id="departure">
         <option value="lisbon">Lisbon</option>
@@ -72,6 +68,6 @@
   </div>
 
   <script src="../../scripts/preço.js"></script>
-  <script src="../../scripts/reserva.js"></script>
+  <script src="../../scripts/booking.js"></script>
 </body>
 </html>
