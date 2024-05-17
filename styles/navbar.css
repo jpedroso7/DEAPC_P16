@@ -163,3 +163,23 @@ color: white;
 .menu-item:hover .drop-menu {
     display: block;
 }
+
+footer {
+
+    height: 40px;
+    
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    border-top: 2px solid rgb(31, 79, 104);
+    background-color: rgba(1, 48, 75, 0.9);
+    color: darkgray;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    font-size: 10px;
+  }
+  
+  
