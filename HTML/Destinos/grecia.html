@@ -5,14 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Viagens para a Grécia</title>
   <link rel="stylesheet" href="../../styles/navbar.css">
-  <link rel="stylesheet" href="../../styles/viagemConfig.css">
-  
+  <link rel="stylesheet" href="../../styles/viagemConfig.css">  
   <link rel="icon" type="image/x-icon" href="../../images/logogpt.jpeg">
+  <style>
+    html { 
+        background: url('../../images/grecia2.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
 </head>
 <body>
   <nav>
     <div class="img_container">
-       <a href="../index.html"><img src="../../images/logogpt.jpeg" alt="Logo" id="logo"></a>
+       <a href="../../index.html"><img src="../../images/logogpt.jpeg" alt="Logo" id="logo"></a>
     </div>
    <div id="titulo">
     <h1>
@@ -40,6 +48,7 @@
       </div>
    
   </nav>
+  <div class="main">
   <div class="container2">
     <form id="bookingForm" action="booking_confirmation_page.html" method="POST">
       <label for="departure">Departure Airport:</label>
@@ -72,7 +81,7 @@
     </form>
     
   </div>
-
+</div>
   <script src="../../scripts/preço.js"></script>
 </body>
 </html>
