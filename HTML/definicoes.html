@@ -7,30 +7,41 @@
     <link rel="stylesheet" href="../styles/definicoes.css">
     <link rel="stylesheet" href="../styles/navbar.css">
     <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="icon" type="image/x-icon" href="../images/182408209/LogoFiles/ForWeb/Favicons/browser.png">
+    <link rel="icon" type="image/x-icon" href="../images/logogpt.jpeg">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-
-    <div class="Menu_user">
-        <h1 class="hello" style="margin-bottom: 30px;">Hello </h1>
-        <ul class="menu">
+    <nav>
+        <div class="img_container">
+           <a href="#"><img src="../images/logogpt.jpeg" alt="Logo" id="logo"></a>
+        </div>
+       <div id="titulo">
+        <h1>
+          Desenvolvimento de viagens computacionais
+        </h1>
+       </div>
+        <div class="Menu_user">
+           <h1 class="hello" style="margin-bottom: 30px;">Hello </h1>
+           <ul class="menu">
             <li class="menu-item">
-                <a class="User">User</a>
-                <ul class="drop-menu">
-                    <li class="drop-menu-item">
-                        <a href="#">Reservas</a>
-                    </li>
-                    <li class="drop-menu-item">
-                        <a href="#">Reviews</a>
-                    </li>
-                    <li class="drop-menu-item">
-                        <a href="definicoes.html">Definições</a>
-                    </li>
-                </ul>
+           <a  class="User">User</a>
+           <ul class="drop-menu">
+            <li class="drop-menu-item">
+                <a href="#">Reservas</a>
             </li>
+            <li class="drop-menu-item">
+                <a href="HTML/reviewPage.html">Reviews</a>
+            </li>
+            <li class="drop-menu-item">
+              <a href="HTML/definicoes.html">Definições</a>
+          </li>
         </ul>
-    </div>
+      </li>
+    </ul>
+          </div>
+       
+      </nav>
 
     <div class="settings-container">
         <h2>Definições</h2>
@@ -67,7 +78,12 @@
         </div>
     </div>
 
-    
+    <footer>
+        <i class="fas fa-plane airplane-icon"></i>
+        <em>Trabalho realizado por Daniel Botelho, João Pedroso e Rui Martins</em>
+        
+        <i class="fas fa-plane airplane-icon"></i>
+      </footer>
     <script>
         
         document.getElementById('privacidade-btn').addEventListener('click', function(event) {
