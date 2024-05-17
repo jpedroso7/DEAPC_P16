@@ -1,8 +1,10 @@
 body {
     font-family: 'Lato', sans-serif;
-    background-color: #f0f0f0;
+    background: url('../images/new-background-image-travel.png') no-repeat center center fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 .Menu_user {
@@ -61,47 +63,6 @@ body {
     display: block;
 }
 
-.profile-container {
-    max-width: 600px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    border-radius: 8px;
-}
-
-.profile-container img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-}
-
-.profile-container h1 {
-    margin-top: 10px;
-    font-size: 24px;
-}
-
-.profile-container p {
-    font-size: 16px;
-    color: #666;
-}
-
-.profile-container button {
-    padding: 10px 20px;
-    background-color: rgb(0, 87, 146);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
-}
-
-.profile-container button:hover {
-    background-color: rgb(0, 70, 120);
-}
-
 .settings-container {
     max-width: 600px;
     margin: 50px auto;
@@ -109,6 +70,7 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    text-align: center;
 }
 
 .settings-container h2 {
@@ -124,5 +86,56 @@ body {
 
 .settings-options button {
     padding: 10px 20px;
-    background
+    background-color: rgb(0, 87, 146);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.settings-options button:hover {
+    background-color: rgb(0, 70, 120);
+}
+
+.settings-section {
+    display: none;
+}
+
+.settings-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.settings-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.settings-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.settings-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.settings-form button {
+    padding: 10px 20px;
+    background-color: rgb(0, 87, 146);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.settings-form button:hover {
+    background-color: rgb(0, 70, 120);
 }
