@@ -3,13 +3,14 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  background-image: url("../images/background4.jpg");
-  background-position: center ;
+  background-image: url("../images/182408209/background3.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; /* Add this line */
   color: #333;
 }
+
 
 .container {
   display: flex;
@@ -44,9 +45,11 @@ body {
 }
 
 #brasil {
-  background: url("../images/brasil2.jpg") no-repeat center;
-  background-size: cover;
+  background: url("../images/brasil2.jpg") no-repeat ;
+  background-size:cover;
+  
 }
+
 
 #paraguai {
   background: url("../images/paraguai.jpg") no-repeat center;
@@ -94,9 +97,7 @@ body {
   color: #f0f0f0;
 }
 
-#info-paraguai:hover {
-  color: rgb(73, 150, 86);
-}
+
 
 .link {
   text-decoration: none;
