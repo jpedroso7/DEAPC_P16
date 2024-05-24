@@ -5,7 +5,5 @@ document.addEventListener('DOMContentLoaded', function() {
     bookingForm.addEventListener('submit', function(event) {
         event.preventDefault(); // Impede o envio do formulário
         alert('Your booking has been confirmed!');
-        window.location.href = "../reviews.html";
     });
-    
 });

@@ -1,0 +1,189 @@
+#logo {
+
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    
+}
+
+.Menu_login {
+    display:flex;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+    align-items: center;
+
+}
+
+.Menu_login button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 600;
+    width:max-content;
+    padding: 10px 10px;
+    box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+    transition: 0.4s;
+  }
+
+  .login:hover {
+    color: white;
+    box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+    background-color: rgba(104, 85, 224, 1);
+  }
+  
+
+
+.login {
+    
+    color: rgb(104, 85, 224);
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(104, 85, 224, 1);
+}
+
+.sign {
+    margin-left: 20px;
+    color: white;
+    background-color: rgba(104, 85, 224, 1);
+  }
+
+  .sign:hover {
+    color: rgba(104, 85, 224, 1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    background-color: white;
+
+  }
+
+.Menu_user {
+    display:flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    
+}
+
+img {
+
+    width: fit-content;
+    height: fit-content;
+}
+
+.hello {
+    margin-right:  10px;
+    margin-bottom: 10px;
+}
+
+nav {
+display:flex;
+height: 80px;
+width: 100%;
+justify-content:space-around;
+background-color: rgb(1, 48, 75);
+z-index: 999;
+position: fixed;
+top:0;
+border-bottom: 2px solid rgb(31, 79, 104);
+
+
+}
+
+
+
+
+#titulo {
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+align-items: center;
+align-content: center;
+color: white;
+}
+
+#titulo h1 {
+    margin: 0 auto;
+}
+
+.menu, .drop-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+    align-content: center;
+}
+
+.menu-item {
+    display: inline-block;
+    background-color: #4285f4;
+    position: center;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: fit-content;
+    
+ 
+}
+
+
+
+.menu-item a {
+    text-decoration: none;
+    padding: 10px 10px;
+    color: #fff;
+    display: block;
+    width: 50px;
+    align-self: center;
+    width: fit-content;
+}
+
+.drop-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 100px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    border-radius: 8px;
+    
+    
+}
+
+.drop-menu-item {
+    width: 100%;
+}
+
+.drop-menu-item:hover {
+    color: white;
+    box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+    background-color: rgba(104, 85, 224, 1);
+    border-radius: 8px;
+}
+
+.drop-menu-item a {
+    color: #555;
+}
+
+.drop-menu-item a:hover {
+
+    color: white;
+}
+
+.menu-item:hover .drop-menu {
+    display: block;
+}
+
+footer {
+
+    height: 40px;
+    
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    border-top: 2px solid rgb(31, 79, 104);
+    background-color: rgba(1, 48, 75, 0.9);
+    color: darkgray;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    font-size: 10px;
+  }
+  
+  
