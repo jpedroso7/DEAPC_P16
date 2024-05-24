@@ -1,0 +1,124 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-image: url("../images/background4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* Add this line */
+  color: #333;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+.destination {
+  width: 60vw;
+  height: 40vh;
+  margin: 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #175579;
+  border-style: ridge;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.destination:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#grecia {
+  background: url("../images/grecia2.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#brasil {
+  background: url("../images/brasil2.jpg") no-repeat ;
+  background-size:cover;
+  
+}
+
+
+#paraguai {
+  background: url("../images/paraguai.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#japao {
+  background: url("../images/japao.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#noruega {
+  background: url("../images/noruega.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#marrocos {
+  background: url("../images/marrocos.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.destination-info {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.destination-info h3 {
+  margin: 5px 0;
+  font-size: 1.5em;
+}
+
+.destination-info p {
+  margin: 0;
+  font-size: 1em;
+}
+
+.destination-info:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #f0f0f0;
+}
+
+
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer {
+
+  height: 40px;
+  
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  border-top: 2px solid rgb(31, 79, 104);
+  background-color: rgba(1, 48, 75, 0.9);
+  color: darkgray;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  font-size: 10px;
+}
+

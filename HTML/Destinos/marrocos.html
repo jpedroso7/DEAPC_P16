@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viagens para Marrocos</title>
+  <link rel="stylesheet" href="../../styles/navbar.css">
+  <link rel="stylesheet" href="../../styles/viagemConfig.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="../../images/logogpt.jpeg">
+  <style>
+    html { 
+        background: url('../../images/marrocos.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+</head>
+<body>
+  <nav>
+    <div class="img_container">
+       <a href="../../index.html"><img src="../../images/logogpt.jpeg" alt="Logo" id="logo"></a>
+    </div>
+   <div id="titulo">
+    <h1>
+      Book your trip to Morroco
+    </h1>
+   </div>
+    <div class="Menu_user">
+       <h1 class="hello">Hello </h1>
+       <ul class="menu">
+        <li class="menu-item">
+       <a  class="User">User</a>
+       <ul class="drop-menu">
+        <li class="drop-menu-item">
+            <a href="#">Perfil</a>
+        </li>
+        <li class="drop-menu-item">
+            <a href="#">Reservas</a>
+        </li>
+        <li class="drop-menu-item">
+            <a href="#">Reviews</a>
+        </li>
+    </ul>
+  </li>
+</ul>
+      </div>
+   
+  </nav>
+  <div class="container2">
+    <form id="bookingForm" action="booking_confirmation_page.html" method="POST">
+      <label for="departure">Departure Airport:</label>
+      <select name="departure" id="departure">
+        <option value="lisbon">Lisbon</option>
+        <option value="porto">Porto</option>
+        <option value="algarve">Algarve</option>
+      </select>
+
+      <label for="people">Number of People:</label>
+      <select name="people" id="people">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+
+      <label for="hotel">Choose Hotel:</label>
+      <select name="hotel" id="hotel">
+        <option value="hotel1">Hotel 1</option>
+        <option value="hotel2">Hotel 2</option>
+        <option value="hotel3">Hotel 3</option>
+        <option value="hotel4">Hotel 4</option>
+      </select>
+      <div id="priceDisplay"></div>
+      
+      <button type="submit">Book Now</button>
+    </form>
+    
+  </div>
+  <footer>
+    <i class="fas fa-plane airplane-icon"></i>
+    <em>Trabalho realizado por Daniel Botelho, João Pedroso e Rui Martins</em>
+    
+    <i class="fas fa-plane airplane-icon"></i>
+  </footer>
+  <script src="../../scripts/preço.js"></script>
+</body>
+</html>
