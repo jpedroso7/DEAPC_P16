@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23-Maio-2024 às 22:55
+-- Tempo de geração: 25-Maio-2024 às 11:56
 -- Versão do servidor: 10.4.32-MariaDB
 -- versão do PHP: 8.2.12
 
@@ -45,10 +45,7 @@ INSERT INTO `destinations` (`id`, `name`, `description`, `image_path`) VALUES
 (4, 'Noruega', 'Voo c/ 7 noites incluídas', '../assets/images/noruega.jpg'),
 (5, 'Marrocos', 'Voo c/ 7 noites incluídas', '../assets/images/marrocos.jpg'),
 (6, 'Japao', 'Voo c/ 7 noites incluídas', '../assets/images/japao.jpg'),
-(20, 'conxixina', '-.-', '../assets/images/logo.png'),
-(21, 'Veneza', 'Voo c/ 7 noites incluidas', '../assets/images/veneza.jpg'),
-(22, 'Gondomar', 'Gondomar crl', '../assets/images/gondomar.jpg'),
-(23, 'Tailandia', 'descrição da tailandia', '../assets/images/tailandia.jpg');
+(25, 'Açores', 'Voo c/ maço de tabaco e fino incluido', '../assets/images/Açores.jpeg');
 
 -- --------------------------------------------------------
 
@@ -61,16 +58,21 @@ CREATE TABLE `reviews` (
   `review_text` text NOT NULL,
   `rating` int(11) NOT NULL CHECK (`rating` >= 1 and `rating` <= 5),
   `user_name` varchar(255) NOT NULL,
-  `user_id` int(11) NOT NULL
+  `user_id` int(11) NOT NULL,
+  `viagem_id` int(11) NOT NULL,
+  `destination_name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `reviews`
 --
 
-INSERT INTO `reviews` (`id`, `review_text`, `rating`, `user_name`, `user_id`) VALUES
-(7, 'gosteu muito desta viagem', 4, 'daniel', 5),
-(8, 'foi uma merda', 1, 'daniel', 5);
+INSERT INTO `reviews` (`id`, `review_text`, `rating`, `user_name`, `user_id`, `viagem_id`, `destination_name`) VALUES
+(1, '', 4, 'elias', 4, 82, 'Grecia'),
+(2, '', 3, 'elias', 4, 82, 'Grecia'),
+(3, 'DO CRLLLL', 5, 'daniel', 5, 84, 'Paraguai'),
+(4, 'Neste artigo, veremos como colocar um texto em itálico usando CSS. Para colocar o texto em itálico em qualquer página da web, a propriedade CSS font-style é usada. Temos uma variedade de opções para defini-lo como texto em itálico.\r\n\r\nnormal: é o estilo de fonte normal. É igual a 400, o valor numérico padrão para negrito.\r\nnegrito : é o estilo de fonte em negrito. É o mesmo que 700.\r\nitálico: é o estilo de fonte cursivo.', 5, 'daniel', 5, 85, 'Açores'),
+(5, '', 4, 'daniel', 5, 86, 'Japao');
 
 -- --------------------------------------------------------
 
@@ -118,20 +120,11 @@ CREATE TABLE `viagens` (
 --
 
 INSERT INTO `viagens` (`id`, `destination_id`, `departure_airport`, `num_people`, `hotel`, `price`, `user_id`, `destination_name`, `user_name`) VALUES
-(33, 1, 'lisbon', 1, '0', 800.00, 4, 'Grecia', 'elias'),
-(34, 2, 'lisbon', 1, '0', 900.00, 4, 'Brasil', 'elias'),
-(35, 1, 'lisbon', 1, '0', 950.00, 4, 'Grecia', 'elias'),
-(55, 1, 'lisbon', 1, '0', 800.00, 5, 'Grecia', 'Daniel'),
-(56, 21, 'algarve', 3, '0', 1200.00, 5, 'Veneza', 'Daniel'),
-(57, 21, 'lisbon', 1, '0', 950.00, 5, 'Veneza', 'Daniel'),
-(59, 1, 'lisbon', 1, '0', 800.00, 5, 'Grecia', 'Daniel'),
-(60, 1, 'lisbon', 1, '0', 800.00, 5, 'Grecia', 'Daniel'),
-(61, 1, 'lisbon', 1, '0', 800.00, 5, 'Grecia', 'Daniel'),
-(62, 1, 'lisbon', 1, '0', 800.00, 5, 'Grecia', 'Daniel'),
-(63, 1, 'lisbon', 1, '0', 800.00, 5, 'Grecia', 'Daniel'),
-(64, 1, 'lisbon', 1, '0', 800.00, 5, 'Grecia', 'Daniel'),
-(65, 1, 'lisbon', 1, '0', 800.00, 5, 'Grecia', 'Daniel'),
-(66, 1, 'lisbon', 1, '0', 900.00, 5, 'Grecia', 'Daniel');
+(82, 1, 'lisbon', 1, '0', 800.00, 4, 'Grecia', 'elias'),
+(83, 2, 'Lisbon', 1, '0', 800.00, 5, 'Brasil', 'daniel'),
+(84, 3, 'Lisbon', 4, '0', 1450.00, 5, 'Paraguai', 'daniel'),
+(85, 25, 'algarve', 1, '0', 900.00, 5, 'Açores', 'daniel'),
+(86, 6, 'Lisbon', 1, '0', 800.00, 5, 'Japao', 'daniel');
 
 --
 -- Índices para tabelas despejadas
@@ -148,7 +141,8 @@ ALTER TABLE `destinations`
 --
 ALTER TABLE `reviews`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`);
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `viagem_id` (`viagem_id`);
 
 --
 -- Índices para tabela `users`
@@ -172,13 +166,13 @@ ALTER TABLE `viagens`
 -- AUTO_INCREMENT de tabela `destinations`
 --
 ALTER TABLE `destinations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de tabela `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `users`
@@ -190,7 +184,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabela `viagens`
 --
 ALTER TABLE `viagens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 
 --
 -- Restrições para despejos de tabelas
@@ -200,7 +194,8 @@ ALTER TABLE `viagens`
 -- Limitadores para a tabela `reviews`
 --
 ALTER TABLE `reviews`
-  ADD CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `reviews_ibfk_2` FOREIGN KEY (`viagem_id`) REFERENCES `viagens` (`id`);
 
 --
 -- Limitadores para a tabela `viagens`

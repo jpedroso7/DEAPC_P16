@@ -7,7 +7,9 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['user_name'])) {
 
 include_once "../includes/db-conn.php";
 
-$stmt = $conn->prepare("SELECT review_text, rating, user_name FROM reviews");
+$stmt = $conn->prepare("SELECT r.review_text, r.rating, r.user_name, v.destination_name 
+                        FROM reviews AS r
+                        INNER JOIN viagens AS v ON r.viagem_id = v.id");
 $stmt->execute();
 $result = $stmt->get_result();
 $reviews = $result->fetch_all(MYSQLI_ASSOC);
@@ -24,15 +26,13 @@ $stmt->close();
   <link rel="stylesheet" href="../assets/styles/navbar.css">
   <link rel="stylesheet" href="../assets/styles/styles.css">
   <link rel="stylesheet" href="../assets/styles/reviews.css">
-  <link rel="icon" type="image/x-icon" href="../images/logogpt.jpeg">
+  <link rel="icon" type="image/x-icon" href="../assets/images/logogpt.jpeg">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
 </head>
 <body>
-  
-<nav>
+  <nav>
     <div class="img_container">
        <a href="home.php"><img src="../assets/images/logogpt.jpeg" alt="Logo" id="logo"></a>
     </div>
@@ -69,8 +69,8 @@ $stmt->close();
   <div class="review_container">
     <?php foreach ($reviews as $review): ?>
       <div class="review">
-        <h3><?php echo htmlspecialchars($review['user_name']); ?></h3>
-        <p><?php echo nl2br(htmlspecialchars($review['review_text'])); ?></p>
+        <div class="header"><h3><?php echo htmlspecialchars($review['user_name']); ?> </h3> <h3 id="dest"><?php echo htmlspecialchars($review['destination_name']); ?></h3></div>
+        <p id="text"><?php echo nl2br(htmlspecialchars($review['review_text'])); ?></p>
         <div class="stars">
           <?php for ($i = 1; $i <= 5; $i++): ?>
             <i class="fa-star <?php echo ($i <= $review['rating']) ? 'fa-solid' : 'fa-regular'; ?>"></i>
@@ -85,13 +85,10 @@ $stmt->close();
     <i class="fas fa-plane airplane-icon"></i>
   </footer>
   <style>
-
     body {
-
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .review_container {
       padding: 20px;
@@ -108,13 +105,29 @@ justify-content: space-between;
       border-radius: 5px;
       color: darkgrey;
     }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #dest {
+      color: white;
+      font-weigth: bold;
+      margin-right: 20px;
+    }
+
+    #text {
+      color: white;
+      font-style: italic;
+    }
+
     .stars {
       color: #ffb400;
     }
     .fa-regular {
       color: #ccc;
     }
-
     .fa-solid {
       color: gold;
     }

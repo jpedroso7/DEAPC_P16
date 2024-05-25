@@ -12,6 +12,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         $user_name = $_SESSION['user_name'];
         $destination_id = $_POST['destination_id'];
 
+        // Example prices
         $precoInicial = 500;
         $precoPessoa = 200;
         $precoHotel = 0;
@@ -31,14 +32,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         }
         $price = $precoInicial + ($num_people * $precoPessoa) + $precoHotel;
 
-        $stmt = $conn->prepare("SELECT name FROM users WHERE id = ?");
-        $stmt->bind_param("i", $user_id);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $user = $result->fetch_assoc();
-        $user_name = $user['name'];
-        $stmt->close();
-
+        // Get the destination name
         $stmt = $conn->prepare("SELECT name FROM destinations WHERE id = ?");
         $stmt->bind_param("i", $destination_id);
         $stmt->execute();
@@ -47,15 +41,17 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         $destination_name = $destination['name'];
         $stmt->close();
 
+        // Insert booking
         $sql = "INSERT INTO viagens (destination_id, departure_airport, num_people, hotel, price, user_id, destination_name, user_name)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("issisdss", $destination_id, $departure, $num_people, $hotel, $price, $user_id, $destination_name, $user_name);
         $stmt->execute();
+        $viagem_id = $stmt->insert_id; // Get the ID of the new booking
         $stmt->close();
 
         $_SESSION['booking_success'] = "Booking successful!";
-        header("Location: ../public/reviews.php");
+        header("Location: ../public/reviews.php?viagem_id=$viagem_id&destination_name=" . urlencode($destination_name));
         exit();
     } else {
         header("Location: index.php");
