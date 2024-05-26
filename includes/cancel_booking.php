@@ -2,33 +2,46 @@
 session_start();
 
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
-    // Check if booking_id is provided
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['booking_id'])) {
-        // Include the database connection file
         include_once "db-conn.php";
 
-        // Retrieve the booking_id
         $booking_id = $_POST['booking_id'];
 
-        // Prepare and execute SQL DELETE statement
+        // Delete associated reviews first
+        $sql_delete_reviews = "DELETE FROM reviews WHERE viagem_id = ?";
+        $stmt_delete_reviews = $conn->prepare($sql_delete_reviews);
+        if ($stmt_delete_reviews) {
+            $stmt_delete_reviews->bind_param("i", $booking_id);
+            $stmt_delete_reviews->execute();
+            $stmt_delete_reviews->close();
+        } else {
+            $_SESSION['error'] = "Error preparing the reviews delete request.";
+            header("Location: ../public/mybookings.php");
+            exit();
+        }
+
+        // Now delete the booking
         $sql = "DELETE FROM viagens WHERE id = ?";
         $stmt = $conn->prepare($sql);
         if ($stmt) {
             $stmt->bind_param("i", $booking_id);
-            $stmt->execute();
+            if ($stmt->execute()) {
+                $_SESSION['message'] = "Booking canceled successfully.";
+            } else {
+                $_SESSION['error'] = "Error canceling the booking. Please try again.";
+            }
             $stmt->close();
+        } else {
+            $_SESSION['error'] = "Error preparing the booking delete request. Please try again.";
         }
-
-        // Redirect back to mybookings.php
+        
         header("Location: ../public/mybookings.php");
         exit();
     } else {
-        // Redirect to mybookings.php if no booking_id is provided
         header("Location: ../public/mybookings.php");
         exit();
     }
 } else {
-    // Redirect to login page if user is not logged in
     header("Location: ../public/index.php");
     exit();
 }

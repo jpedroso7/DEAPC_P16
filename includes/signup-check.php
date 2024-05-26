@@ -57,10 +57,14 @@ if (isset($_POST['uname']) && isset($_POST['password'])
 		}else {
            $sql2 = "INSERT INTO users(user_name, password, name) VALUES('$uname', '$pass', '$name')";
            $result2 = mysqli_query($conn, $sql2);
-           if ($result2) {
-           	 header("Location: ../public/signup.php?success=Your account has been created successfully");
-	         exit();
-           }else {
+		   if ($result2) {
+			// Se a criação do usuário for bem-sucedida, configure uma mensagem de sucesso
+			$success_message = "Your account has been created successfully";
+			// Redirecionar para a página de login com a mensagem de sucesso
+			header("Location: ./login.php?sucess=" . urlencode($success_message));
+			exit(); 
+           }
+			else {
 	           	header("Location: ../public/signup.php?error=unknown error occurred&$user_data");
 		        exit();
            }
