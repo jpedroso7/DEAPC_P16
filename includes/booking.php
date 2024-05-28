@@ -4,6 +4,8 @@ session_start();
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         include_once "db-conn.php";
+        include_once "functions.php";
+
 
         $departure = $_POST['departure'];
         $num_people = $_POST['people'];
@@ -49,6 +51,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         $stmt->execute();
         $viagem_id = $stmt->insert_id; // Get the ID of the new booking
         $stmt->close();
+
+
+// Log the booking action
+$action = "Booking";
+$description = "User $user_name (ID: $user_id) booked a trip to $destination_name (ID: $destination_id).";
+log_action($conn, $user_id, $action, $description);
+
 
         $_SESSION['booking_success'] = "Booking successful!";
         header("Location: ../public/reviews.php?viagem_id=$viagem_id&destination_name=" . urlencode($destination_name));

@@ -54,7 +54,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role']
 </div>
 <div class="card" id="logs">
 <img src="../assets/images/icons8-logs-96.png">
-        <p><a href="../includes/logs.php">Logs</a></p>
+        <p><a href="logs.php">Logs</a></p>
 </div>
   </div>
 
