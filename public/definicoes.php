@@ -8,24 +8,25 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Definições</title>
-    <link rel="stylesheet" href="../assets/styles/definicoes.css">
     <link rel="stylesheet" href="../assets/styles/navbar.css">
     <link rel="stylesheet" href="../assets/styles/styles.css">
-    <link rel="icon" type="image/x-icon" href="../images/logogpt.jpeg">
+    <link rel="stylesheet" href="../styles/definicoes.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/logogpt.jpeg">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
 </head>
 <body>
 <nav>
-    <div class="img_container">
-       <a href="#"><img src="../assets/images/logogpt.jpeg" alt="Logo" id="logo"></a>
+<div class="img_container">
+       <a href="home.php"><img src="../assets/images/logogpt.jpeg" alt="Logo" id="logo"></a>
     </div>
    <div id="titulo">
     <h1>
-      Desenvolvimento de viagens computacionais
+      Definições
     </h1>
    </div>
    
@@ -42,7 +43,7 @@
             <a href="show_reviews.php">Reviews</a>
         </li>
         <li class="drop-menu-item">
-          <a href="../HTML/definicoes.html">Definições</a>
+          <a href="definicoes.php">Definições</a>
       </li>
       <li class="drop-menu-item">
             <a href="../includes/logout.php">Logout</a>
@@ -64,29 +65,31 @@
 
         <div id="privacidade" class="settings-section" style="display: none;">
             <h3>Privacidade</h3>
-            <form class="settings-form">
-                <div class="form-group">
-                    <label for="current-password">Senha Atual</label>
-                    <input type="password" id="current-password" name="current-password" required>
-                </div>
-                <div class="form-group">
-                    <label for="new-password">Nova Senha</label>
-                    <input type="password" id="new-password" name="new-password" required>
-                </div>
-                <div class="form-group">
-                    <label for="confirm-password">Confirmar Nova Senha</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required>
-                </div>
-                <button type="submit">Alterar Senha</button>
-            </form>
+            <form action="alterar_senha.php" method="post">
+        <div class="form-group">
+            <label for="current-password">Senha Atual</label>
+            <input type="password" id="current-password" name="current-password" required>
+        </div>
+        <div class="form-group">
+            <label for="new-password">Nova Senha</label>
+            <input type="password" id="new-password" name="new-password" required>
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirmar Nova Senha</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
+        <button type="submit">Alterar Senha</button>
+    </form>
         </div>
 
 
         <div id="conta" class="settings-section" style="display: none;">
-            <h3>Conta</h3>
-       
-            <p>....</p>
-        </div>
+    <h3>Conta</h3>
+    <p>Nome de Utilizador: <?php echo $_SESSION['user_name']; ?></p>
+    <p>Nome: <?php echo $_SESSION['name']; ?></p>
+    <!-- Outras informações da conta podem ser adicionadas aqui -->
+</div>
+
     </div>
 
     <footer>
