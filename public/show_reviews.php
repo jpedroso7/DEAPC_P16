@@ -55,7 +55,7 @@ $stmt->close();
             <a href="show_reviews.php">Reviews</a>
         </li>
         <li class="drop-menu-item">
-          <a href="../HTML/definicoes.html">Definições</a>
+          <a href="definicoes.php">Definições</a>
       </li>
       <li class="drop-menu-item">
             <a href="../includes/logout.php">Logout</a>

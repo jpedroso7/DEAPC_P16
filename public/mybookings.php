@@ -142,35 +142,39 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     </head>
     <body>
     <nav>
-        <div class="img_container">
-            <a href="../public/home.php"><img src="../assets/images/logogpt.jpeg" alt="Logo" id="logo"></a>
-        </div>
-        <div id="titulo">
-            <h1>My bookings</h1>
-        </div>
-        <div class="Menu_user">
-            <h1 class="hello" style="margin-bottom: 30px;">Hello </h1>
-            <ul class="menu">
-                <li class="menu-item">
-                    <a class="User"><?php echo $_SESSION['name']; ?></a>
-                    <ul class="drop-menu">
-                        <li class="drop-menu-item">
-                            <a href="mybookings.php">Reservas</a>
-                        </li>
-                        <li class="drop-menu-item">
-                            <a href="../HTML/reviewPage.html">Reviews</a>
-                        </li>
-                        <li class="drop-menu-item">
-                            <a href="../HTML/definicoes.html">Definições</a>
-                        </li>
-                        <li class="drop-menu-item">
-                            <a href="../includes/logout.php">Logout</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div class="img_container">
+       <a href="home.php"><img src="../assets/images/logogpt.jpeg" alt="Logo" id="logo"></a>
+    </div>
+   <div id="titulo">
+    <h1>
+      My Bookings
+    </h1>
+   </div>
+   
+    <div class="Menu_user">
+       <h1 class="hello" style="margin-bottom: 30px;">Hello </h1>
+       <ul class="menu">
+        <li class="menu-item">
+       <a  class="User"><?php echo $_SESSION['name']; ?></a>
+       <ul class="drop-menu">
+        <li class="drop-menu-item">
+            <a href="mybookings.php">Reservas</a>
+        </li>
+        <li class="drop-menu-item">
+            <a href="show_reviews.php">Reviews</a>
+        </li>
+        <li class="drop-menu-item">
+          <a href="definicoes.php">Definições</a>
+      </li>
+      <li class="drop-menu-item">
+            <a href="../includes/logout.php">Logout</a>
+        </li>
+    </ul>
+  </li>
+</ul>
+      </div>
+   
+  </nav>
     <div class="main">
         <div class="container2">
             <!-- Display session messages -->

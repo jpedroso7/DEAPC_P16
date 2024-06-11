@@ -36,19 +36,27 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         </div>
 
         <div class="Menu_user">
-            <h1 class="hello">Hello</h1>
-            <ul class="menu">
-                <li class="menu-item">
-                    <a class="User"><?php echo $_SESSION['name']; ?></a>
-                    <ul class="drop-menu">
-                        <li class="drop-menu-item"><a href="#">Perfil</a></li>
-                        <li class="drop-menu-item"><a href="../mybookings.php">Reservas</a></li>
-                        <li class="drop-menu-item"><a href="#">Reviews</a></li>
-                        <li class="drop-menu-item"><a href="../../includes/logout.php">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+       <h1 class="hello" >Hello </h1>
+       <ul class="menu">
+        <li class="menu-item">
+       <a  class="User"><?php echo $_SESSION['name']; ?></a>
+       <ul class="drop-menu">
+        <li class="drop-menu-item">
+            <a href="../mybookings.php">Reservas</a>
+        </li>
+        <li class="drop-menu-item">
+            <a href="../show_reviews.php">Reviews</a>
+        </li>
+        <li class="drop-menu-item">
+          <a href="../definicoes.php">Definições</a>
+      </li>
+      <li class="drop-menu-item">
+            <a href="../../includes/logout.php">Logout</a>
+        </li>
+    </ul>
+  </li>
+</ul>
+      </div>
     </nav>
     <div class="main">
         <div class="container2">

@@ -93,7 +93,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
       Other Destinations
     </h1>
    </div>
-    <div class="Menu_user">
+   <div class="Menu_user">
        <h1 class="hello" style="margin-bottom: 30px;">Hello </h1>
        <ul class="menu">
         <li class="menu-item">
@@ -103,10 +103,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             <a href="../mybookings.php">Reservas</a>
         </li>
         <li class="drop-menu-item">
-            <a href="../HTML/reviewPage.html">Reviews</a>
+            <a href="../show_reviews.php">Reviews</a>
         </li>
         <li class="drop-menu-item">
-          <a href="../HTML/definicoes.html">Definições</a>
+          <a href="../definicoes.php">Definições</a>
       </li>
       <li class="drop-menu-item">
             <a href="../../includes/logout.php">Logout</a>
