@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION['id']) && isset($_PO
     if ($stmt) {
         $stmt->bind_param("siisis", $review_text, $rating, $user_id, $user_name, $viagem_id, $destination_name);
         if ($stmt->execute()) {
-            // Log the review submission action
+            
             $action = "Review Submission";
             $description = "User $user_name submitted a review for $destination_name with rating $rating.";
             log_action($conn, $user_id, $action, $description);
