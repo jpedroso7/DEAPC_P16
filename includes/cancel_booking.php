@@ -8,7 +8,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
         $booking_id = $_POST['booking_id'];
 
-        // Get booking details for logging
+        
         $stmt_booking_details = $conn->prepare("SELECT destination_name FROM viagens WHERE id = ?");
         if ($stmt_booking_details) {
             $stmt_booking_details->bind_param("i", $booking_id);
@@ -17,7 +17,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             $stmt_booking_details->fetch();
             $stmt_booking_details->close();
 
-            // Delete associated reviews first
+            
             $sql_delete_reviews = "DELETE FROM reviews WHERE viagem_id = ?";
             $stmt_delete_reviews = $conn->prepare($sql_delete_reviews);
             if ($stmt_delete_reviews) {
@@ -25,13 +25,14 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 $stmt_delete_reviews->execute();
                 $stmt_delete_reviews->close();
 
-                // Now delete the booking
+                
                 $sql_delete_booking = "DELETE FROM viagens WHERE id = ?";
                 $stmt_delete_booking = $conn->prepare($sql_delete_booking);
                 if ($stmt_delete_booking) {
                     $stmt_delete_booking->bind_param("i", $booking_id);
                     if ($stmt_delete_booking->execute()) {
-                        // Log the cancellation action
+                       
+                        
                         $action = "Booking Cancellation";
                         $description = "User {$_SESSION['user_name']} canceled a trip to $destination_name (Booking ID: $booking_id).";
                         log_action($conn, $_SESSION['id'], $action, $description);
