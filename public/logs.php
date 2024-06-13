@@ -35,16 +35,16 @@ $stmt->close();
     <link rel="stylesheet" href="../assets/styles/viagemConfig.css">
     <link rel="icon" type="image/x-icon" href="../../assets/images/logogpt.jpeg">
     <style>
-            /* Apply basic styling to the main container */
+           
             .main {
                 margin: 20px;
                 display: flex;
-                justify-content: center; /* Center horizontally */
-                align-items: center; /* Center vertically */
-                height: 100vh; /* Set the height to full viewport height */
+                justify-content: center; 
+                align-items: center; 
+                height: 100vh; 
             }
 
-            /* Style the table container */
+           
             .container2 {
                 border: 1px solid #ccc;
                 border-radius: 5px;
@@ -52,7 +52,7 @@ $stmt->close();
                 width: 75%;
             }
 
-            /* Apply styling to the table */
+           
             table {
                 width: 100%;
                 border-collapse: collapse;
@@ -60,7 +60,7 @@ $stmt->close();
                 font-weight: bold;
             }
 
-            /* Style the table header */
+           
             th {
                 background-color: rgb(1, 48, 75);
                 color: darkgrey;
@@ -69,13 +69,13 @@ $stmt->close();
                 text-align: left;
             }
 
-            /* Style the table rows */
+           
             td {
                 padding: 10px;
                 border-bottom: 1px solid #ddd;
             }
 
-            /* Alternate row background color for better readability */
+            
             tr:nth-child(even) {
                 background: rgb(1, 48, 75, 0.8);
             }
@@ -84,7 +84,7 @@ $stmt->close();
                 background-color: rgba(31, 79, 104, 0.8);
             }
 
-            /* Hover effect on table rows */
+           
             tr:hover {
                 opacity: 0.8;
             }
@@ -111,7 +111,7 @@ $stmt->close();
                 margin: 0;
             }
 
-            /* Responsive table design for smaller screens */
+            
             @media screen and (max-width: 600px) {
                 table {
                     border: 0;
