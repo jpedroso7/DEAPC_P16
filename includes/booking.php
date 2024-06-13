@@ -34,7 +34,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         }
         $price = $precoInicial + ($num_people * $precoPessoa) + $precoHotel;
 
-        // Get the destination name
+        // Nome do destino
         $stmt = $conn->prepare("SELECT name FROM destinations WHERE id = ?");
         $stmt->bind_param("i", $destination_id);
         $stmt->execute();
@@ -43,7 +43,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         $destination_name = $destination['name'];
         $stmt->close();
 
-        // Insert booking
+        // Inserir dados na bd
         $sql = "INSERT INTO viagens (destination_id, departure_airport, num_people, hotel, price, user_id, destination_name, user_name)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
@@ -53,7 +53,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         $stmt->close();
 
 
-// Log the booking action
+// Log
 $action = "Booking";
 $description = "User $user_name (ID: $user_id) booked a trip to $destination_name (ID: $destination_id).";
 log_action($conn, $user_id, $action, $description);
