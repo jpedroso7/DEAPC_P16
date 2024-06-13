@@ -4,7 +4,7 @@ include_once "db-conn.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['destination_id'])) {
     $destination_id = $_POST['destination_id'];
 
-    // Fetch the destination details from the database
+    
     $stmt = $conn->prepare("SELECT name FROM destinations WHERE id = ?");
     $stmt->bind_param("i", $destination_id);
     $stmt->execute();
@@ -16,12 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['destination_id'])) {
         $destination_name = strtolower(str_replace(' ', '', $destination['name']));
         $file_path = "../public/Destinos/{$destination_name}.php";
 
-        // Delete the file if it exists
+        // Apagar a página do destino
         if (file_exists($file_path)) {
             unlink($file_path);
         }
 
-        // Delete the destination record from the database
+        
         $stmt = $conn->prepare("DELETE FROM destinations WHERE id = ?");
         $stmt->bind_param("i", $destination_id);
         $stmt->execute();
